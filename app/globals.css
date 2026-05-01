@@ -1,0 +1,28 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui;
+  --font-serif: var(--font-playfair), ui-serif, Georgia;
+
+  --color-brand-wood: #8B5E3C;
+  --color-brand-charcoal: #1A1A1A;
+  --color-brand-beige: #F5F5F0;
+  --color-brand-gold: #D4AF37;
+}
+
+@layer base {
+  body {
+    @apply selection:bg-brand-wood selection:text-white;
+  }
+}
+
+@layer utilities {
+  .text-glass {
+    @apply bg-clip-text text-transparent bg-linear-to-r from-brand-charcoal to-brand-wood;
+  }
+  
+  .glass {
+    @apply bg-white/70 backdrop-blur-md border border-white/20;
+  }
+}
